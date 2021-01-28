@@ -50,7 +50,10 @@ function mainMenu (req) {
 		},
 		{
 			action: 'input',
-			maxDigits: 1,
+			type: [ 'dtmf' ],
+			dtmf: {
+				maxDigits: 1,
+			},
 			eventUrl: [ `${req.protocol}://${req.get('host')}/webhooks/dtmf` ],
 		},
 	];
