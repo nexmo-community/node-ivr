@@ -15,7 +15,7 @@ app.post('/webhooks/events', (req, res) => {
 app.post('/webhooks/dtmf', (req, res) => {
 	let actions = [];
 	let ncco = [];
-	switch (req.body.dtmf) {
+	switch (req.body.dtmf.digits) {
 		case '1':
 			actions.push({
 				action: 'talk',
